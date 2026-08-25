@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --bg: #F4F6F9;
+  --bg-elevated: #FFFFFF;
+  --bg-sunken: #ECEFF4;
+  --border: #E1E6ED;
+  --ink: #1B2430;
+  --ink-soft: #5B6472;
+  --ink-faint: #8B94A3;
+}
+
+.dark {
+  --bg: #10151D;
+  --bg-elevated: #171F2A;
+  --bg-sunken: #131922;
+  --border: #262F3C;
+  --ink: #E8ECF2;
+  --ink-soft: #97A2B4;
+  --ink-faint: #64707F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #2F5FD1;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
